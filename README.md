@@ -1,9 +1,7 @@
-# szakdoga
+A szakdolgozat megtalÃ¡lhatÃ³ a diplomaterv portÃ¡lon diplomaterv.vik.bme.hu, Kiber-fizikai rendszerek szemantikusan tÃ¡mogatott futÃ¡sidejÅ± ÃºjrakonfigurÃ¡ciÃ³ja nÃ©ven.
 
-A szakdolgozat megtalálható a diplomaterv portálon diplomaterv.vik.bme.hu, Kiber-fizikai rendszerek szemantikusan támogatott futásidejû újrakonfigurációja néven.
-
-Az elkészült ontológiák az ontology mappán belül találhatók.  
-Az elkészült R script az fcaR mappában található.  
-A Kubernetes mappa tartalmazza a felhasznált konfig fájlokat.  
-A DockerDeployments tartalmazza a felhasznált docker imageket.
+Az elkÃ©szÃ¼lt ontolÃ³giÃ¡k az ontology mappÃ¡n belÃ¼l talÃ¡lhatÃ³k.  
+Az elkÃ©szÃ¼lt R script az fcaR mappÃ¡ban talÃ¡lhatÃ³.  
+A Kubernetes mappa tartalmazza a felhasznÃ¡lt konfig fÃ¡jlokat.  
+A DockerDeployments tartalmazza a felhasznÃ¡lt docker imageket.
 
