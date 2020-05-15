@@ -1,6 +1,9 @@
 # szakdoga
 
-## Using fcaR
+A szakdolgozat megtalálható a diplomaterv portálon diplomaterv.vik.bme.hu, Kiber-fizikai rendszerek szemantikusan támogatott futásidejû újrakonfigurációja néven.
 
-install Rstudio, R
+Az elkészült ontológiák az ontology mappán belül találhatók.  
+Az elkészült R script az fcaR mappában található.  
+A Kubernetes mappa tartalmazza a felhasznált konfig fájlokat.  
+A DockerDeployments tartalmazza a felhasznált docker imageket.
 
