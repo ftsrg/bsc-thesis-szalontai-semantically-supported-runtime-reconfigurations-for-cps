@@ -1,0 +1,686 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://inf.mit.bme.hu/research/dds/"
+     xml:base="http://inf.mit.bme.hu/research/dds/"
+     xmlns:dds="http://inf.mit.bme.hu/research/dds/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://inf.mit.bme.hu/research/dds/">
+        <preferredNamespacePrefix>dds</preferredNamespacePrefix>
+        <preferredNamespaceUri rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <dcterms:created>2020-03-31</dcterms:created>
+        <dcterms:description xml:lang="en">The DDS specification describes a Data-Centric Publish-Subscribe (DCPS) model for distributed application communication and integration by RTI. This ontology stores the main concepts of it.</dcterms:description>
+        <dcterms:title xml:lang="en">Data Distribution Service (DDS) for Real-Time Systems by RTI ontology</dcterms:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://inf.mit.bme.hu/research/dds/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://inf.mit.bme.hu/research/dds/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/Sample_read_by -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/Sample_read_by">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/dds/reads_Sample"/>
+        <rdfs:comment xml:lang="en">Relation between a DataReader and a Sample, recording that the Sample is read by DataReader.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">Sample read by</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a DataReader and a Sample, recording that the Sample is read by DataReader.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/hasDomainParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/hasDomainParticipant">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/dds/is_DomainParticipant_of"/>
+        <rdfs:comment xml:lang="en">Relation between a Domain and a DomainParticipant, recording that the Domain has a DomainParticipant.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">has DomainParticipant</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Domain and a DomainParticipant, recording that the Domain has a DomainParticipant.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/hasPublisher -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/hasPublisher">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/dds/is_Publisher_of"/>
+        <rdfs:comment xml:lang="en">Relation between a Publisher and a DomainParticipant, recording that the DomainParticipant has a Publisher.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">has Publisher</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Publisher and a DomainParticipant, recording that the DomainParticipant has a Publisher.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/has_DataReader -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/has_DataReader">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/dds/is_DataReaderOf"/>
+        <rdfs:comment xml:lang="en">Relation between a Publisher and a DataReader, recording that the Publisher has a DataReader.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">has DataReader</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Publisher and a DataReader, recording that the Publisher has a DataReader.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/has_DataWriter -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/has_DataWriter">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/dds/is_DataWriter_of"/>
+        <rdfs:comment xml:lang="en">Relation between a Publisher and a DataWriter, recording that the Publisher has a DataWriter.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">has DataWriter</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Publisher and a DataWriter, recording that the Publisher has a DataWriter.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/has_QoS -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/has_QoS">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/dds/is_QoS_of"/>
+        <rdfs:comment xml:lang="en">Relation between a Topic and a QoS, recording that the Topic has a QoS setting.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">has QoS</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Topic and a QoS, recording that the Topic has a QoS setting.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/has_Replier -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/has_Replier">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/dds/is_Replier_of"/>
+        <rdfs:comment xml:lang="en">Relation between a DomainParticipant and a Replier, recording that the DomainParticipant has a Replier.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">has Replier</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a DomainParticipant and a Replier, recording that the DomainParticipant has a Replier.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/has_Requester -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/has_Requester">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/dds/is_Requester_of"/>
+        <rdfs:comment xml:lang="en">Relation between a DomainParticipant and a Requester, recording that the DomainParticipant has a Requester.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">has Requester</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a DomainParticipant and a Requester, recording that the DomainParticipant has a Requester.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/has_Subscriber -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/has_Subscriber">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/dds/is_Subscriber_of"/>
+        <rdfs:comment xml:lang="en">Relation between a Subscriber and a DomainParticipant, recording that the DomainParticipant has a Subscriber.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">has Subscriber</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Subscriber and a DomainParticipant, recording that the DomainParticipant has a Subscriber.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/has_Topic -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/has_Topic">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/dds/is_Topic_of"/>
+        <rdfs:comment xml:lang="en">Relation between a Topic an entity, recording that the entity has a Topic.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">has Topic</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Topic an entity, recording that the entity has a Topic.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/is_DataReaderOf -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/is_DataReaderOf">
+        <rdfs:comment xml:lang="en">Relation between a Publisher and a DataReader, recording that the DataReader is &quot;DataReader of&quot; a Publisher.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">is DataReader of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Publisher and a DataReader, recording that the DataReader is &quot;DataReader of&quot; a Publisher.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/is_DataWriter_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/is_DataWriter_of">
+        <rdfs:comment xml:lang="en">Relation between a Publisher and a DataWriter, recording that the Datawriter is the DataWriter of a Publisher.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">is DataWriter of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Publisher and a DataWriter, recording that the Datawriter is the DataWriter of a Publisher.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/is_DomainParticipant_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/is_DomainParticipant_of">
+        <rdfs:comment xml:lang="en">Relation between a Domain and a DomainParticipant, recording that the DomainParticipant is deployed in that Domain.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">is DomainParticipant of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Domain and a DomainParticipant, recording that the DomainParticipant is deployed in that Domain.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/is_Publisher_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/is_Publisher_of">
+        <rdfs:comment xml:lang="en">Relation between a Publisher and a DomainParticipant, recording that the  Publisher is Publisher of a DomainParticipant.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">is Publisher of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Publisher and a DomainParticipant, recording that the  Publisher is Publisher of a DomainParticipant.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/is_QoS_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/is_QoS_of">
+        <rdfs:comment xml:lang="en">Relation between a Topic and a QoS, recording that the QoS is annoted to Topic.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">is QoS of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Topic and a QoS, recording that the QoS is annoted to Topic.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/is_Replier_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/is_Replier_of">
+        <rdfs:comment xml:lang="en">Relation between a DomainParticipant and a Replier, recording that the  Replier is the &quot;Replier of&quot; DomainParticipant.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">is Replier of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a DomainParticipant and a Replier, recording that the  Replier is the &quot;Replier of&quot; DomainParticipant.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/is_Requester_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/is_Requester_of">
+        <rdfs:comment xml:lang="en">Relation between a DomainParticipant and a Requester, recording that the  Requester is the &quot;Requester of&quot; DomainParticipant.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">is Requester of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a DomainParticipant and a Requester, recording that the  Requester is the &quot;Requester of&quot; DomainParticipant.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/is_Subscriber_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/is_Subscriber_of">
+        <rdfs:comment xml:lang="en">Relation between a Subscriber and a DomainParticipant, recording that the  Subscriber is &quot;Subscriber of&quot; a DomainParticipant.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">is Subscriber of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Subscriber and a DomainParticipant, recording that the  Subscriber is &quot;Subscriber of&quot; a DomainParticipant.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/is_Topic_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/is_Topic_of">
+        <rdfs:comment xml:lang="en">Relation between a Topic an entity, recording that the Topic is &quot;Topic of&quot; an entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">is Topic of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Topic an entity, recording that the Topic is &quot;Topic of&quot; an entity.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/reads_Sample -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/reads_Sample">
+        <rdfs:comment xml:lang="en">Relation between a DataReader and a Sample, recording that the DataReader reads Sample.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">reads Sample</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a DataReader and a Sample, recording that the DataReader reads Sample.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/write_Sample -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/write_Sample">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/dds/writtenBy"/>
+        <rdfs:comment xml:lang="en">Relation between a DataWriter and a Sample, recording that the DataWriter writes Sample.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">writes Sample</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a DataWriter and a Sample, recording that the DataWriter writes Sample.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/writtenBy -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/dds/writtenBy">
+        <rdfs:comment xml:lang="en">Relation between a DataWriter and a Sample, recording that the Sample is written by a DataWriter.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">Sample written by</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a DataWriter and a Sample, recording that the Sample is written by a DataWriter.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/IDL_File_Location -->
+
+    <owl:DatatypeProperty rdf:about="http://inf.mit.bme.hu/research/dds/IDL_File_Location">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/TopicName -->
+
+    <owl:DatatypeProperty rdf:about="http://inf.mit.bme.hu/research/dds/TopicName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/DataReader -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/dds/DataReader">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/dds/Subscriber"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/is_DataReaderOf"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/Subscriber"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/reads_Sample"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/Sample"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/has_Topic"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A DataReader is analogous to a JMS TopicSubscriber. Each DataReader is tied to a single topic. A DataReader will only receive data that was published on its Topic.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A DataReader is the point through which a subscribing application accesses the data that it has received over the network.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">DataReader</rdfs:label>
+        <skos:definition xml:lang="en">A DataReader is the point through which a subscribing application accesses the data that it has received over the network.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/DataWriter -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/dds/DataWriter">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/dds/Publisher"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/is_DataWriter_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/Publisher"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/write_Sample"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/Sample"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/has_Topic"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A DataWriter is analogous to a JMS TopicPublisher. Once a DataWriter is created and configured with the correct QoS settings, an application only needs to use the DataWriter’s “write” operation to publish data.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An application uses a DataWriter to publish data into a DDS domain.</rdfs:comment>
+        <rdfs:comment xml:lang="en">DataWriter is tied to a single topic. All data published by that DataWriter will be directed to that Topic..</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">DataWriter</rdfs:label>
+        <skos:definition xml:lang="en">An application uses a DataWriter to publish data into a DDS domain.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/Domain -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/dds/Domain">
+        <rdfs:comment xml:lang="en">A DDS domain is a concept used to bind individual applications together for communication.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Applications in one DDS domain cannot subscribe to data published in a different DDS domain. Multiple DDS domains allow you to have multiple virtual distributed systems on the same physical network. This can be very useful if you want to run multiple independent tests of the same applications. You can run them at the same time on the same network as long as each test runs in a different DDS domain. Another typical configuration is to isolate your development team from your test and production teams: you can assign each team or even each developer a unique DDS domain. To communicate with each other, DataWriters and DataReaders must have the same Topic of the same DDS data type and be members of the same DDS domain. Each DDS domain has a unique integer domain ID.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">Domain</rdfs:label>
+        <skos:definition xml:lang="en">A DDS domain is a concept used to bind individual applications together for communication.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/DomainParticipant -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/dds/DomainParticipant">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/hasPublisher"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/Publisher"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/has_Replier"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/Replier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/has_Requester"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/Requester"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/has_Subscriber"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/Subscriber"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An application must have a DomainParticipant for every DDS domain in which the application will communicate. (Unless your application is a bridging application, it will typically participate in only one DDS domain and have only one DomainParticipant.) A DomainParticipant is analogous to a JMS Connection. DomainParticipants are used to create Topics, Publishers, DataWriters, Subscribers, and DataReaders in the corresponding DDS domain.</rdfs:comment>
+        <rdfs:comment xml:lang="en">DomainParticipant objects enable an application to exchange messages within DDS domains.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">DomainParticipant</rdfs:label>
+        <skos:definition xml:lang="en">DomainParticipant objects enable an application to exchange messages within DDS domains.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/Publisher -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/dds/Publisher">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/dds/DomainParticipant"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/has_DataWriter"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/DataWriter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/is_Publisher_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/DomainParticipant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Publisher is used to group individual DataWriters. A Publisher is analogous to the producing aspect of a JMS TopicSession.</rdfs:comment>
+        <rdfs:comment xml:lang="en">You can specify default QoS behavior for a Publisher and have it apply to all the DataWriters in that Publisher’s group.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+        <skos:definition xml:lang="en">A Publisher is used to group individual DataWriters. A Publisher is analogous to the producing aspect of a JMS TopicSession.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/Quality_of_Service -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/dds/Quality_of_Service">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/is_QoS_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Each data producer-consumer pair can establish independent quality of service agreements—even in many-to-many topologies. This allows applications to support extremely complex and flexible data-flow requirements.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Other QoS policies control when Connext DDS detects nodes that have failed, set delivery order, attach user data, prioritize messages, set resource utilization limits, partition the system into namespaces, control durability (for fault tolerance) and much more. The Connext DDS QoS policies offer unprecedented flexible communications control. The RTI Connext DDS Core Libraries User&apos;s Manual contains details about all available QoS policies.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Periodic producers can indicate the speed at which they can publish by offering guaranteed update deadlines. By setting a deadline, a producer promises to send updates at a minimum rate. Consumers may then request data at that or any slower rate. If a consumer requests a higher data rate than the producer offers, Connext DDS will flag that pair as incompatible and notify both the publishing and subscribing applications.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Producers may offer different levels of reliability, characterized in part by the number of past DDS data samples they store for retransmission. Consumers may then request differing levels of reliable delivery, ranging from fast-but-unreliable &quot;best effort&quot; to highly reliable in-order delivery. This provides per-data-stream reliability control. A single producer can support consumers with different levels of reliability simultaneously.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">Quality of Service</rdfs:label>
+        <skos:definition xml:lang="en">Each data producer-consumer pair can establish independent quality of service agreements—even in many-to-many topologies. This allows applications to support extremely complex and flexible data-flow requirements.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/Replier -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/dds/Replier">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/dds/DomainParticipant"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/is_Replier_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/DomainParticipant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Replier uses an existing DomainParticipant to communicate through a domain and owns a DataReader for receiving requests and a DataWriter for writing replies.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Replier receives a request and can send one or more replies for that request.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">Replier</rdfs:label>
+        <skos:definition xml:lang="en">Replier receives a request and can send one or more replies for that request.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/Requester -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/dds/Requester">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/dds/DomainParticipant"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/is_Requester_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/DomainParticipant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Requester uses an existing DomainParticipant to communicate through a domain. It owns a DataWriter for writing requests and a DataReader for receiving replies.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An application uses a Requester to send requests to a Replier.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Requester that sent the request (and only that one) will receive the reply (or replies).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">Requester</rdfs:label>
+        <skos:definition xml:lang="en">An application uses a Requester to send requests to a Replier.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/Sample -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/dds/Sample">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/Sample_read_by"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/DataReader"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/writtenBy"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/DataWriter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A DDS sample is analogous to a message in other publish-subscribe middleware.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">Sample</rdfs:label>
+        <skos:definition xml:lang="en">A DDS sample is analogous to a message in other publish-subscribe middleware.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/Subscriber -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/dds/Subscriber">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/dds/DomainParticipant"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/has_DataReader"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/DataReader"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/is_Subscriber_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/DomainParticipant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Subscribers are used to group DataReaders. A Subscriber is analogous to the consuming aspect of a JMS TopicSession.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Subscribers are used to group DataReaders. Again, this allows you to configure a default set of QoS parameters and event handling routines that will apply to all DataReaders in the Subscriber&apos;s group.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">Subscriber</rdfs:label>
+        <skos:definition xml:lang="en">Subscribers are used to group DataReaders. A Subscriber is analogous to the consuming aspect of a JMS TopicSession.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/Topic -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/dds/Topic">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/has_QoS"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/Quality_of_Service"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">To communicate, the Topic of a DataWriter on one node must match the Topic of a DataReader on any other node. A Topic is comprised of a name and a DDS type. The name is a string that uniquely identifies the Topic within a DDS domain. The DDS type is the structural definition of the data contained within the Topic;</rdfs:comment>
+        <rdfs:comment xml:lang="en">Topics provide the basic connection points between DataWriters and DataReaders.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <rdfs:label xml:lang="en">Topic</rdfs:label>
+        <skos:definition xml:lang="en">Topics provide the basic connection points between DataWriters and DataReaders.</skos:definition>
+        <skos:example xml:lang="en">An application may use a single Topic to carry data about many objects. For example, a stock-trading application may have a single topic, &quot;Stock Price,&quot; that it uses to communicate information about Apple, Google, Microsoft, and many other companies.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocommons/voaf#Vocabulary -->
+
+    <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/ -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/dds/">
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

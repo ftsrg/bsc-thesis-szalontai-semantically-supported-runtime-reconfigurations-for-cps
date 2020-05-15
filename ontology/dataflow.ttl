@@ -1,0 +1,268 @@
+@prefix : <https://w3id.org/dfd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/dfd> .
+
+<https://w3id.org/dfd> rdf:type owl:Ontology ;
+                        owl:versionIRI <https://w3id.org/dfd/1.0.0> ;
+                        <http://purl.org/dc/elements/1.1/creator> "Christophe Debruyne" ;
+                        <http://purl.org/dc/elements/1.1/description> "An ontology for Data Flow (Diagrams)." ;
+                        <http://purl.org/dc/elements/1.1/title> "Data Flow Ontology" ;
+                        <http://purl.org/dc/terms/abstract> "An ontology for Data Flow (Diagrams)." ;
+                        <http://purl.org/dc/terms/created> "2018-11-01"^^xsd:date ;
+                        <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by/4.0/"^^<https://w3.org/2001/XMLSchema#anyURI> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/dfd#from
+:from rdf:type owl:ObjectProperty ;
+      rdfs:domain :DataFlow ;
+      rdfs:range :Dataflow_Entity ;
+      rdfs:comment "A property to link a data flow to its origin." ;
+      rdfs:label "from entity" ,
+                 "from entity"@en .
+
+
+###  https://w3id.org/dfd#has_Input_Topic
+:has_Input_Topic rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :is_Input_Topic_of ;
+                 rdfs:label "has Input Topic"@en .
+
+
+###  https://w3id.org/dfd#has_Interface_input
+:has_Interface_input rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :is_Interface_input_of ;
+                     rdfs:label "has Interface input"@en .
+
+
+###  https://w3id.org/dfd#has_Interface_output
+:has_Interface_output rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :is_Interface_output_of ;
+                      rdfs:label "has Interface output"@en .
+
+
+###  https://w3id.org/dfd#has_Output_Topic
+:has_Output_Topic rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :is_Output_Topic_of ;
+                  rdfs:label "has Output Topic"@en .
+
+
+###  https://w3id.org/dfd#has_dataflow_element
+:has_dataflow_element rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :is_dataflow_element_of ;
+                      rdfs:label "has dataflow element"@en .
+
+
+###  https://w3id.org/dfd#has_dfprocess
+:has_dfprocess rdf:type owl:ObjectProperty ;
+               owl:inverseOf :is_dfprocess_of ;
+               rdfs:label "has dfprocess"@en .
+
+
+###  https://w3id.org/dfd#is_Input_Topic_of
+:is_Input_Topic_of rdf:type owl:ObjectProperty ;
+                   rdfs:label "is Input Topic of"@en .
+
+
+###  https://w3id.org/dfd#is_Interface_input_of
+:is_Interface_input_of rdf:type owl:ObjectProperty ;
+                       rdfs:label "is Interface input of"@en .
+
+
+###  https://w3id.org/dfd#is_Interface_output_of
+:is_Interface_output_of rdf:type owl:ObjectProperty ;
+                        rdfs:label "is Interface output of"@en .
+
+
+###  https://w3id.org/dfd#is_Output_Topic_of
+:is_Output_Topic_of rdf:type owl:ObjectProperty ;
+                    rdfs:label "is Output Topic of"@en .
+
+
+###  https://w3id.org/dfd#is_dataflow_element_of
+:is_dataflow_element_of rdf:type owl:ObjectProperty ;
+                        rdfs:label "is dataflow element of"@en .
+
+
+###  https://w3id.org/dfd#is_dfprocess_of
+:is_dfprocess_of rdf:type owl:ObjectProperty ;
+                 rdfs:label "is dfprocess of"@en .
+
+
+###  https://w3id.org/dfd#subProcessOf
+:subProcessOf rdf:type owl:ObjectProperty ;
+              rdfs:domain :Process ;
+              rdfs:range :Process ;
+              rdfs:comment "A property to indicate that a process is part of another process. This predicate is used when functionality decomposing a process into smaller processes." ;
+              rdfs:label "subprocess of" ,
+                         "subprocess of"@en .
+
+
+###  https://w3id.org/dfd#to
+:to rdf:type owl:ObjectProperty ;
+    rdfs:domain :DataFlow ;
+    rdfs:range :Dataflow_Entity ;
+    rdfs:comment "A property to link a data flow to its destination." ;
+    rdfs:label "to entity" ,
+               "to entity"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/dfd#DataFlow
+:DataFlow rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :has_dataflow_element ;
+                            owl:allValuesFrom :DataFlow_element
+                          ] ;
+          rdfs:comment "A data flow can be best understood as data in motion, moving from one place in a system to another. A data flow is data that move together, so it can be composed of many individual pieces of data that are generated at the same time and that flow together to common destinations. (Source: J. A. Hoffer, J. F. George, and J. S. Valacich, “Modern Systems Analysis and Design,” Development, 2002) Examples of data include: data on a form or a report; results of a query to a database; or data entered in a computer." ;
+          rdfs:label "DataFlow" ,
+                     "DataFlow"@en .
+
+
+###  https://w3id.org/dfd#DataFlow_element
+:DataFlow_element rdf:type owl:Class ;
+                  rdfs:subClassOf :DataFlow ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :has_Interface_input ;
+                                    owl:allValuesFrom :Interface
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :has_Interface_output ;
+                                    owl:allValuesFrom :Interface
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :has_dfprocess ;
+                                    owl:allValuesFrom :Process
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :is_dataflow_element_of ;
+                                    owl:allValuesFrom :DataFlow
+                                  ] ;
+                  rdfs:label "DataFlow element"@en .
+
+
+###  https://w3id.org/dfd#DataStore
+:DataStore rdf:type owl:Class ;
+           rdfs:subClassOf :Dataflow_Entity ;
+           rdfs:comment "Data at rest, which may take the form of many different physical representations. A data store may represent one of many different physical locations for data; for example, a file folder, one or more computer-based file(s), or a notebook. (Source: J. A. Hoffer, J. F. George, and J. S. Valacich, “Modern Systems Analysis and Design,” Development, 2002)" ;
+           rdfs:label "Data Store" ,
+                      "Data Store"@en .
+
+
+###  https://w3id.org/dfd#Dataflow_Entity
+:Dataflow_Entity rdf:type owl:Class ;
+                 rdfs:comment "Entities is an abstract concept for representing the targets and sources of data flows." ;
+                 rdfs:label "Dataflow Entity"@en .
+
+
+###  https://w3id.org/dfd#Interface
+:Interface rdf:type owl:Class ;
+           rdfs:subClassOf :Dataflow_Entity ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :is_Interface_input_of ;
+                             owl:allValuesFrom :DataFlow_element
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :is_Interface_output_of ;
+                             owl:allValuesFrom :DataFlow_element
+                           ] ;
+           rdfs:comment "The origin and/or destination of data; sometimes referred to as external entities. (Source: J. A. Hoffer, J. F. George, and J. S. Valacich, “Modern Systems Analysis and Design,” Development, 2002)" ;
+           rdfs:label "Interface" ,
+                      "Interface"@en .
+
+
+###  https://w3id.org/dfd#Process
+:Process rdf:type owl:Class ;
+         rdfs:subClassOf :Dataflow_Entity ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :is_dfprocess_of ;
+                           owl:allValuesFrom :DataFlow_element
+                         ] ;
+         rdfs:comment "The work or actions performed on data so that they are transformed, stored, or distributed. (Source: J. A. Hoffer, J. F. George, and J. S. Valacich, “Modern Systems Analysis and Design,” Development, 2002)" ;
+         rdfs:label "Process" ,
+                    "Process"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/dfd#DFProcess_dataAcq
+:DFProcess_dataAcq rdf:type owl:NamedIndividual ,
+                            :Process ;
+                   rdfs:comment "Reading Sensor Data"@en .
+
+
+###  https://w3id.org/dfd#DFProcess_dataClear
+:DFProcess_dataClear rdf:type owl:NamedIndividual ,
+                              :Process .
+
+
+###  https://w3id.org/dfd#Dataflow_element_DataAcq
+:Dataflow_element_DataAcq rdf:type owl:NamedIndividual ,
+                                   :DataFlow_element ;
+                          :has_Interface_input :Interface_SensorRaw ;
+                          :has_Interface_output :Interface_SensorRawData ;
+                          :has_dfprocess :DFProcess_dataAcq .
+
+
+###  https://w3id.org/dfd#Interface_SensorData
+:Interface_SensorData rdf:type owl:NamedIndividual ,
+                               :Interface .
+
+
+###  https://w3id.org/dfd#Interface_SensorRaw
+:Interface_SensorRaw rdf:type owl:NamedIndividual ,
+                              :Interface .
+
+
+###  https://w3id.org/dfd#Interface_SensorRawData
+:Interface_SensorRawData rdf:type owl:NamedIndividual ,
+                                  :Interface .
+
+
+###  https://w3id.org/dfd#dataflow_element_DataClear
+:dataflow_element_DataClear rdf:type owl:NamedIndividual ,
+                                     :DataFlow_element ;
+                            :has_Interface_input :Interface_SensorRawData ;
+                            :has_Interface_output :Interface_SensorData ;
+                            :has_dfprocess :DFProcess_dataClear .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

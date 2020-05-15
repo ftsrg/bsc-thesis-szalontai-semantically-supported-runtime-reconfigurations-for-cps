@@ -1,0 +1,36 @@
+######################################################################
+# makefile_router_transf
+#
+# (c) Copyright, Real-Time Innovations, 2016.  All rights reserved.
+# No duplications, whole or partial, manual or electronic, may be made
+# without express written permission.  Any such copies, or
+# revisions thereof, must display this notice unaltered.
+# This code contains trade secrets of Real-Time Innovations, Inc.
+#
+#
+# To compile, type:
+# 	gmake -f <makefile_file_name>
+#
+# Note: This makefile is only meant to build our example applications and
+#       may require alterations to build on your system.
+#
+# This makefile assumes that your build environment is already correctly
+# configured. (For example, the correct version of your compiler and
+# linker should be on your PATH.)
+######################################################################
+
+ARCH = armv7QNX7.0.0qcc_cxx5.4.0
+
+export QNX_BASE =/opt/qnx700
+export QNX_HOST =$(QNX_BASE)/host/linux/x86_64
+export QNX_TARGET =$(QNX_BASE)/target/qnx7
+
+DEFINES_ARCH_SPECIFIC = -DRTI_QNX -DRTI_QNX7
+
+c_cc = ${QNX_HOST}/usr/bin/qcc
+c_cc_flags = -Vgcc/5.4.0,gcc_ntoarmv7le -Y_cxx -fPIC
+c_ld = ${QNX_HOST}/usr/bin/qcc
+c_ld_flags = -Vgcc/5.4.0,gcc_ntoarmv7le -Y_cxx
+syslibs =  -lm -lsocket
+
+include Makefile.Common

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cpsds.topic1
+  namespace: default
+data:
+  NDDS_DISCOVERY_PEERS: rtps@rti-cloud-discovery.default:7400
+  TOPIC_OUTPUT: topic1

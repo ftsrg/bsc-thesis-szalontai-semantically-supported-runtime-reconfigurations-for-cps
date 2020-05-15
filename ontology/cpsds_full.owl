@@ -1,0 +1,1187 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://inf.mit.bme.hu/research/cpsds/"
+     xml:base="http://inf.mit.bme.hu/research/cpsds/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dds="http://inf.mit.bme.hu/research/dds/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ssn="http://www.w3.org/ns/ssn/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:sosa="http://www.w3.org/ns/sosa/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:cpsds="http://inf.mit.bme.hu/research/cpsds/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:systems="http://www.w3.org/ns/ssn/systems/"
+     xmlns:qudt-1-1="http://qudt.org/1.1/schema/qudt#"
+     xmlns:kubernetes="http://inf.mit.bme.hu/research/kubernetes/"
+     xmlns:ssn-system="http://schema.org/"
+     xmlns:qudt-unit-1-1="http://qudt.org/1.1/vocab/unit#">
+    <owl:Ontology rdf:about="http://inf.mit.bme.hu/research/cpsds/">
+        <owl:imports rdf:resource="http://inf.mit.bme.hu/research/dds/"/>
+        <owl:imports rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/ssn/systems/"/>
+        <owl:imports rdf:resource="https://w3id.org/dfd/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://qudt.org/1.1/schema/qudt#unit -->
+
+    <owl:AnnotationProperty rdf:about="http://qudt.org/1.1/schema/qudt#unit"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasFeatureOfInterest -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasResult -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/sosa/hasResult"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeBySensor -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/sosa/madeBySensor"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/observedProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/sosa/observedProperty"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/observes -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/sosa/observes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://qudt.org/1.1/vocab/unit#DegreeCelsius -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/1.1/vocab/unit#DegreeCelsius">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/1.1/vocab/unit#DegreeFahreinheit -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/1.1/vocab/unit#DegreeFahreinheit">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://qudt.org/1.1/vocab/unit#Second -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/1.1/vocab/unit#Second"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/hasVirtualSensorInput -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/hasVirtualSensorInput">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Virtual_Sensor_Input_of"/>
+        <rdfs:label xml:lang="en">has Virtual Sensor Input</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/has_Domain -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/has_Domain">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Domain_of"/>
+        <rdfs:label xml:lang="en">has Domain</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/has_DomainParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/has_DomainParticipant">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_DomainParticipant_of"/>
+        <rdfs:label xml:lang="en">has DomainParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/has_Fahrenheit_result -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/has_Fahrenheit_result">
+        <rdfs:label xml:lang="en">has Fahrenheit result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/has_IDL -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/has_IDL">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_IDL_of"/>
+        <rdfs:label xml:lang="en">has IDL</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/has_Inside_Location -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/has_Inside_Location">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Inside_Location_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="hu">A belső út megkülönböztetésére használjuk, hogy tudjuk egy adott Location hol található fizikailag, egy hierarchiát írunk le így.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relation between a Location elements, recording that a location element is phisically located inside of the other element</rdfs:comment>
+        <rdfs:label xml:lang="en">has Inside Location</rdfs:label>
+        <skos:example xml:lang="en">A Floor has Rooms inside it.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/has_Kubernetes_Node -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/has_Kubernetes_Node">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Kubernetes_Node_of"/>
+        <rdfs:label xml:lang="en">has Kubernetes Node</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/has_Location -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/has_Location">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Location_of"/>
+        <rdfs:comment xml:lang="en">For connecting a Location to it&apos;s inside locations.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Location</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/has_Temperature_result -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/has_Temperature_result">
+        <rdfs:label xml:lang="en">has Celsius result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/has_Virtual_Sensor_Output -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/has_Virtual_Sensor_Output">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Virtual_Sensor_Output_of"/>
+        <rdfs:label xml:lang="en">has Virtual Sensor Output</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/is_DomainParticipant_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/is_DomainParticipant_of">
+        <rdfs:label xml:lang="en">is DomainParticipant of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/is_Domain_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/is_Domain_of">
+        <rdfs:label xml:lang="en">is Domain of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/is_IDL_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/is_IDL_of">
+        <rdfs:label xml:lang="en">is IDL of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/is_Inside_Location_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/is_Inside_Location_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:label xml:lang="en">is Inside Location of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/is_Kubernetes_Node_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/is_Kubernetes_Node_of">
+        <rdfs:label xml:lang="en">is Kubernetes Node of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/is_Location_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/is_Location_of">
+        <rdfs:label xml:lang="en">is Location of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/is_ObservableProperty_of_Observation -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/is_ObservableProperty_of_Observation">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+        <rdfs:label xml:lang="en">is Observable Property of Observation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/is_Virtual_Sensor_Input_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/is_Virtual_Sensor_Input_of">
+        <rdfs:label xml:lang="en">is Virtual Sensor Input of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/is_Virtual_Sensor_Output_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/is_Virtual_Sensor_Output_of">
+        <rdfs:label xml:lang="en">is Virtual Sensor Output of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/needs_system_capability -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/needs_system_capability">
+        <rdfs:label xml:lang="en">needs system capability</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/observedProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/observedProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Celsius_Result -->
+
+    <owl:DatatypeProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/Celsius_Result"/>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/DockerImageName -->
+
+    <owl:DatatypeProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/DockerImageName"/>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Domain -->
+
+    <owl:DatatypeProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/Domain">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Describe a dds:Domain.</rdfs:comment>
+        <rdfs:label xml:lang="en">DomainID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Fahrenheit_result -->
+
+    <owl:DatatypeProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/Fahrenheit_result">
+        <rdfs:label xml:lang="en">Fahrenheit Result</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/FileLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/FileLocation">
+        <rdfs:comment xml:lang="en">Describes a Path for File Location.</rdfs:comment>
+        <rdfs:label xml:lang="en">File Location</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/ID -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/ID"/>
+    
+
+
+    <!-- http://schema.org/maxValue -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/maxValue"/>
+    
+
+
+    <!-- http://schema.org/minValue -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/minValue"/>
+    
+
+
+    <!-- http://schema.org/value -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/value">
+        <rdfs:label>schema:value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Block -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/cpsds/Block">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Inside_Location"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Floor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Inside_Location_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Building"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Location_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Building -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/cpsds/Building">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Inside_Location"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Block"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Inside_Location_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Campus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Location_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Campus -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/cpsds/Campus">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Inside_Location"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Building"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Inside_Location_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Location_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Floor -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/cpsds/Floor">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Inside_Location"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Inside_Location_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Block"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Location_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Location -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/cpsds/Location">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Inside_Location"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Campus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Location"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Block"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Location"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Building"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Location"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Campus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Location"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Floor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Location"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Room -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/cpsds/Room">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Inside_Location_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Floor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Location_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Unit -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/cpsds/Unit">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/systems/SystemProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/VirtualSensor -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/cpsds/VirtualSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:comment xml:lang="en">Software sensor for simulating physical sensors.</rdfs:comment>
+        <rdfs:label xml:lang="en">Virtual Sensor</rdfs:label>
+        <skos:example xml:lang="en">FahrenheitToCelsius sensor.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/DataReader -->
+
+    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/dds/DataReader">
+        <owl:disjointWith rdf:resource="http://inf.mit.bme.hu/research/dds/DataWriter"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/DataWriter -->
+
+    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/dds/DataWriter"/>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/Domain -->
+
+    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/dds/Domain">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Domain_of"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://inf.mit.bme.hu/research/dds/DomainParticipant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/DomainParticipant -->
+
+    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/dds/DomainParticipant">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Domain"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://inf.mit.bme.hu/research/dds/Domain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/Replier -->
+
+    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/dds/Replier">
+        <owl:disjointWith rdf:resource="http://inf.mit.bme.hu/research/dds/Requester"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/Requester -->
+
+    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/dds/Requester"/>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/dds/Topic -->
+
+    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/dds/Topic">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object -->
+
+    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ObservableProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservableProperty">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_ObservableProperty_of_Observation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/needs_system_capability"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/systems/SystemCapability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Observation -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/dfd#Interface -->
+
+    <rdf:Description rdf:about="https://w3id.org/dfd#Interface">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/dds/has_Topic"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/BME_IB405 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/BME_IB405">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Block_B"/>
+        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Building_I"/>
+        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Campus_BME"/>
+        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Floor_4"/>
+        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room_405"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/BME_IB406 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/BME_IB406">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Block_B"/>
+        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Building_I"/>
+        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Campus_BME"/>
+        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Floor_4"/>
+        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room_406"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/BeagleBone1 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/BeagleBone1">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node"/>
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Worker"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <ssn:hasSubSystem rdf:resource="http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/BeagleBone2 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/BeagleBone2">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node"/>
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Worker"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <ssn:hasSubSystem rdf:resource="http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/BeagleBone3 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/BeagleBone3">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node"/>
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Worker"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <ssn:hasSubSystem rdf:resource="http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Block_B -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Block_B">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Block"/>
+        <has_Inside_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Floor_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Building_I -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Building_I">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Building"/>
+        <has_Inside_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Block_B"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Campus_BME -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Campus_BME">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Campus"/>
+        <has_Inside_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Building_I"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Domain_0 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Domain_0">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Domain"/>
+        <Domain rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Domain>
+        <rdfs:label xml:lang="en">Domain 0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/ExampleCelsiusResult1 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/ExampleCelsiusResult1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Result"/>
+        <Celsius_Result rdf:datatype="http://www.w3.org/2001/XMLSchema#double">25.0</Celsius_Result>
+        <qudt-1-1:unit xml:lang="en">qudt-unit-1-1:DegreeCelsius</qudt-1-1:unit>
+        <rdfs:label xml:lang="en">qudt-1-1:QuantityValue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Floor_4 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Floor_4">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Floor"/>
+        <has_Inside_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room_405"/>
+        <has_Inside_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room_406"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/NamespaceDefault -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/NamespaceDefault">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Namespace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/NormalLifetime -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/NormalLifetime">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/SystemLifetime"/>
+        <rdfs:comment xml:lang="en">In probability theory, a normal distribution is a type of continuous probability distribution for a real-valued random variable</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/NormalTemperatureCondition -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/NormalTemperatureCondition">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/Condition"/>
+        <ssn-system:maxValue rdf:datatype="http://qudt.org/1.1/vocab/unit#DegreeCelsius">80</ssn-system:maxValue>
+        <ssn-system:minValue rdf:datatype="http://qudt.org/1.1/vocab/unit#DegreeCelsius">-40</ssn-system:minValue>
+        <rdfs:comment xml:lang="en">A temperature range of -40 to 80 Celsius.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <needs_system_capability rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorCapability_celsius"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://inf.mit.bme.hu/research/cpsds/BME_IB405"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/ObservationT405 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/ObservationT405">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <sosa:hasSample rdf:resource="http://inf.mit.bme.hu/research/cpsds/Temperature_Average_1m"/>
+        <sosa:usedProcedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_Room_Temperature_Measurement"/>
+        <rdfs:comment xml:lang="en">Observation of inside temperature.</rdfs:comment>
+        <sosa:hasResult rdf:resource="http://inf.mit.bme.hu/research/cpsds/ExampleCelsiusResult1"/>
+        <sosa:observedProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_Room_Temperature_Measurement -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_Room_Temperature_Measurement">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <ssn:hasInput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Temperature_Input"/>
+        <ssn:hasOutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Temperature_Output"/>
+        <rdfs:label xml:lang="en">Procedure Room Temperature Measurement</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/ReadTempContainer -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/ReadTempContainer">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Container"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/ReadTempPod -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/ReadTempPod">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Pod"/>
+        <kubernetes:has_Container rdf:resource="http://inf.mit.bme.hu/research/cpsds/ReadTempContainer"/>
+        <kubernetes:has_Namespace rdf:resource="http://inf.mit.bme.hu/research/cpsds/NamespaceDefault"/>
+        <ssn:hasProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Room_405 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Room_405">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Room_406 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Room_406">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/TemperatureSensorAccuracy -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorAccuracy">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/Accuracy"/>
+        <ssn-system:maxValue rdf:datatype="http://qudt.org/1.1/vocab/unit#DegreeCelsius">0.5</ssn-system:maxValue>
+        <ssn-system:minValue rdf:datatype="http://qudt.org/1.1/vocab/unit#DegreeCelsius">-0.5</ssn-system:minValue>
+        <rdfs:comment xml:lang="en">The accuracy of the temperature sensor is +-0.5 °C in normal temperature and humidity conditions.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/TemperatureSensorCapability_celsius -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorCapability_celsius">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/SystemCapability"/>
+        <systems:hasSystemProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorAccuracy"/>
+        <systems:hasSystemProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorFrequency"/>
+        <systems:hasSystemProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorPrecision"/>
+        <systems:hasSystemProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorSensitivity"/>
+        <systems:hasSystemProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit_Celsius"/>
+        <systems:inCondition rdf:resource="http://inf.mit.bme.hu/research/cpsds/NormalTemperatureCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/TemperatureSensorCapability_fahrenheit -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorCapability_fahrenheit">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/SystemCapability"/>
+        <systems:hasSystemProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit_Fahrenheit"/>
+        <systems:inCondition rdf:resource="http://inf.mit.bme.hu/research/cpsds/NormalTemperatureCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/TemperatureSensorFrequency -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorFrequency">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/Frequency"/>
+        <ssn-system:value rdf:datatype="http://qudt.org/1.1/vocab/unit#Second">2</ssn-system:value>
+        <rdfs:comment xml:lang="en">The smallest possible time between one observation and the next is 2 s on average.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/TemperatureSensorOperatingRange -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorOperatingRange">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/OperatingRange"/>
+        <systems:inCondition rdf:resource="http://inf.mit.bme.hu/research/cpsds/NormalTemperatureCondition"/>
+        <rdfs:comment xml:lang="en">The conditions in which the DHT22 temperature sensor is expected to operate.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/TemperatureSensorPrecision -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorPrecision">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/Precision"/>
+        <ssn-system:maxValue rdf:datatype="http://qudt.org/1.1/vocab/unit#DegreeCelsius">0.2</ssn-system:maxValue>
+        <ssn-system:minValue rdf:datatype="http://qudt.org/1.1/vocab/unit#DegreeCelsius">-0.2</ssn-system:minValue>
+        <rdfs:comment>The precision (= repeatability) of the temperature sensor is +-0.2 °C in normal temperature and humidity conditions.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/TemperatureSensorSensitivity -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorSensitivity">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/Sensitivity"/>
+        <ssn-system:value rdf:datatype="http://qudt.org/1.1/vocab/unit#DegreeCelsius">0.1</ssn-system:value>
+        <rdfs:comment xml:lang="en">The sensitivity and resolution of the temperature sensor is 0.1 °C in normal temperature and humidity conditions.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/TemperatureSensorSurvivalRange -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorSurvivalRange">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/SurvivalRange"/>
+        <systems:hasSurvivalProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/NormalLifetime"/>
+        <systems:inCondition rdf:resource="http://inf.mit.bme.hu/research/cpsds/NormalTemperatureCondition"/>
+        <rdfs:comment xml:lang="en">The survival range of the temperature sensor in normal temperature conditions.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Temperature_Average_1m -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Temperature_Average_1m">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Temperature_Input -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Temperature_Input">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Input"/>
+        <rdfs:label xml:lang="en">Temperature Input</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Temperature_Output -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Temperature_Output">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <rdfs:label xml:lang="en">Temperature Output</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/BME_IB405"/>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/ObservationT405"/>
+        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_Room_Temperature_Measurement"/>
+        <systems:hasOperatingRange rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorOperatingRange"/>
+        <systems:hasSurvivalRange rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorSurvivalRange"/>
+        <systems:hasSystemCapability rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorCapability_celsius"/>
+        <ssn-system:ID>Temperature Sensor1</ssn-system:ID>
+        <rdfs:comment xml:lang="en">The embedded temperature sensor, a specific instance of temperature sensor.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temperature Sensor1</rdfs:label>
+        <sosa:observes rdf:resource="http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor2 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/BME_IB405"/>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/ObservationT405"/>
+        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_Room_Temperature_Measurement"/>
+        <systems:hasOperatingRange rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorOperatingRange"/>
+        <systems:hasSurvivalRange rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorSurvivalRange"/>
+        <systems:hasSystemCapability rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorCapability_fahrenheit"/>
+        <ssn-system:ID>Temperature Sensor2</ssn-system:ID>
+        <rdfs:comment xml:lang="en">The embedded temperature sensor, a specific instance of temperature sensor.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temperature Sensor2</rdfs:label>
+        <sosa:observes rdf:resource="http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor3 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor3">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/BME_IB406"/>
+        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_Room_Temperature_Measurement"/>
+        <systems:hasOperatingRange rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorOperatingRange"/>
+        <systems:hasSurvivalRange rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorSurvivalRange"/>
+        <systems:hasSystemCapability rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorCapability_celsius"/>
+        <ssn-system:ID>Temperature Sensor3</ssn-system:ID>
+        <rdfs:label xml:lang="en">Temperature Sensor3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic1 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic1">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <has_Domain rdf:resource="http://inf.mit.bme.hu/research/cpsds/Domain_0"/>
+        <ssn:hasProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405"/>
+        <dds:IDL_File_Location>./topic1.idl</dds:IDL_File_Location>
+        <dds:TopicName>Topic1</dds:TopicName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic2 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic2">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <has_Domain rdf:resource="http://inf.mit.bme.hu/research/cpsds/Domain_0"/>
+        <ssn:hasProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405"/>
+        <dds:IDL_File_Location>./topic2.idl</dds:IDL_File_Location>
+        <dds:TopicName>Topic2</dds:TopicName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Unit_Celsius -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Unit_Celsius">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Unit_Fahrenheit -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Unit_Fahrenheit">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Unit_Kelvin -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Unit_Kelvin">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/VirtualSensor_CtoF -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/VirtualSensor_CtoF">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/VirtualSensor"/>
+        <hasVirtualSensorInput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit_Celsius"/>
+        <has_Virtual_Sensor_Output rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit_Fahrenheit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/VirtualSensor_FtoC -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/VirtualSensor_FtoC">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/VirtualSensor"/>
+        <hasVirtualSensorInput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit_Fahrenheit"/>
+        <has_Virtual_Sensor_Output rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit_Celsius"/>
+        <DockerImageName>rtiroutingservice_fahrenheittocelsius:1.0</DockerImageName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampling">
+        <rdfs:comment xml:lang="hu">mintavételezés</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

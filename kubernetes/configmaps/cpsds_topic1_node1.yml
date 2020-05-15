@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cpsds.topic1
+  namespace: default
+data:
+  TOPIC_OUTPUT: topic1
+  SENSORID: "Temperature Sensor1"
+  LOCATION: BME_IB405
+  UNIT: "cpsds:Unit_Fahrenheit"
+  NDDS_DISCOVERY_PEERS: rtps@rti-cloud-discovery.default:7400
+

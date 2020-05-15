@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<dds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+     xsi:noNamespaceSchemaLocation="http://community.rti.com/schema/6.0.1/6.0.0/rti_routing_service.xsd">
+    
+    
+    <!-- 
+    Here we're loading our transformation class, compiled by us
+    -->
+    <plugin_library name="MyTransformationLib">
+        <transformation_plugin name="VirtualSensorTransformation">
+            <dll>$(NDDSHOME)/virtualsensors</dll>
+            <create_function>VirtualSensorTransformationPlugin_create</create_function>
+        </transformation_plugin>
+    </plugin_library>
+
+    <!-- 
+    This service defines two very similar topic routes in the same domain route that
+    transform squares read from the first domain using our transformation.
+    -->
+    <routing_service name="example">
+
+        <domain_route name="DomainRoute" enabled="true">
+            <participant name="1">
+                <domain_id>0</domain_id>
+            </participant>
+            <participant name="2">
+                <domain_id>0</domain_id>
+            </participant>
+
+
+			
+            <session name="Session" enabled="true">
+                <!-- 
+                This topic route reads squares with a x-coordinate below 100 and
+                using the transformation publishes the same square but with a fixed
+                x-coordinate, set to 50.
+                -->
+                <topic_route name="Topic_1">
+
+                    <input participant="1">
+                        <registered_type_name>TemperatureSensor</registered_type_name>
+                        <topic_name>$(TOPIC_INPUT)</topic_name>
+						
+                    </input>
+                    <output>
+                        <topic_name>$(TOPIC_OUTPUT)</topic_name>
+                        <registered_type_name>TemperatureSensor</registered_type_name>
+						
+                        <transformation plugin_name="MyTransformationLib::VirtualSensorTransformation">
+						   <property>
+                                <value>
+                                    <element>
+                                        <name>value</name>
+                                        <value>value</value>
+                                    </element>
+                                </value>
+                            </property>
+						
+                        </transformation>
+                    </output>
+                </topic_route>
+            </session>
+        </domain_route>
+    </routing_service>
+
+	
+	</dds>

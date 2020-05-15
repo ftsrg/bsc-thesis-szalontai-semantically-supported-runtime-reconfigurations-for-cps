@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stardog-deployment
+  labels:
+    app: stardog
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stardog
+  template:
+    metadata:
+      labels:
+        app: stardog
+    spec:
+      containers:
+      - name: stardog
+        image: stardog/stardog
+        ports:
+        - containerPort: 5820
+        volumeMounts:
+        - name: stardog-config-file
+          mountPath: /var/opt/stardog
+      volumes:
+      - name: stardog-config-file
+        hostPath: 
+          path: /var/opt
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - kind-control-plane
+      tolerations:
+      - key: "node-role.kubernetes.io/master"
+        operator: "Exists"
+        effect: "NoSchedule"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: stardog-service
+  labels:  
+    app: stardog
+spec:
+  type: NodePort
+  ports:
+    - port: 5820
+      nodePort: 30820
+      name: http
+  selector:
+    app: stardog

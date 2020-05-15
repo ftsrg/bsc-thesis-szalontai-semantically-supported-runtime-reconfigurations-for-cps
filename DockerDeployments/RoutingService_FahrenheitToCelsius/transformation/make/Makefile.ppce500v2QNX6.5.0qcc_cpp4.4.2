@@ -1,0 +1,36 @@
+######################################################################
+# makefile_router_transf
+#
+# (c) Copyright, Real-Time Innovations, 2016.  All rights reserved.
+# No duplications, whole or partial, manual or electronic, may be made
+# without express written permission.  Any such copies, or
+# revisions thereof, must display this notice unaltered.
+# This code contains trade secrets of Real-Time Innovations, Inc.
+#
+#
+# To compile, type:
+# 	gmake -f <makefile_file_name>
+#
+# Note: This makefile is only meant to build our example applications and
+#       may require alterations to build on your system.
+#
+# This makefile assumes that your build environment is already correctly
+# configured. (For example, the correct version of your compiler and
+# linker should be on your PATH.)
+######################################################################
+
+ARCH = ppce500v2QNX6.5.0qcc_cpp4.4.2
+
+export QNX_BASE=/opt/qnx650
+export QNX_HOST=${QNX_BASE}/host/linux/x86
+export QNX_TARGET=${QNX_BASE}/target/qnx6
+
+DEFINES_ARCH_SPECIFIC = -DRTI_QNX
+
+c_cc = ${QNX_HOST}/usr/bin/qcc
+c_cc_flags = -Vgcc/4.4.2,gcc_ntoppcbespe -Y_cpp  -mcpu=8540 -me500v2 -mno-isel -mspe -mhard-float -Wl,--relax -lang-c  -fPIC
+c_ld = ${QNX_HOST}/usr/bin/qcc
+c_ld_flags = -Vgcc/4.4.2,gcc_ntoppcbespe -Y_cpp  -mcpu=8540 -me500v2 -mno-isel -mspe -mhard-float -Wl,--relax -lang-c 
+syslibs =  -lm -lsocket
+
+include Makefile.Common

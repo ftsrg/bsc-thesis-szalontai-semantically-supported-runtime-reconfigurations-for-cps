@@ -1,0 +1,958 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://inf.mit.bme.hu/research/kubernetes/"
+     xml:base="http://inf.mit.bme.hu/research/kubernetes/"
+     xmlns:k8s="http://inf.mit.bme.hu/research/kubernetes/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://inf.mit.bme.hu/research/kubernetes/">
+        <preferredNamespacePrefix>k8s</preferredNamespacePrefix>
+        <preferredNamespaceUri rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <dcterms:created>2020-03-31</dcterms:created>
+        <dcterms:description xml:lang="en">Kubernetes (K8s) is an open-source system for automating deployment, scaling, and management of containerized applications. This ontology stores the main concepts of it.</dcterms:description>
+        <dcterms:title xml:lang="en">Kubernetes (K8s) ontology</dcterms:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/has_Container -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/has_Container">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Container_of"/>
+        <rdfs:comment xml:lang="en">Relation between a Pod and a Container, recording that the Pod has a Container.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">has Container</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Pod and a Container, recording that the Pod has a Container.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/has_Container_Phase -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/has_Container_Phase">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Container_Phase_of"/>
+        <rdfs:comment xml:lang="en">Relation between a Container Phase and a Container, recording that the Container has a Container Phase.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">has Container Phase</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Container Phase and a Container, recording that the Container has a Container Phase.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/has_DaemonSet -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/has_DaemonSet">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_DaemonSet_of"/>
+        <rdfs:comment xml:lang="en">Relation between a DaemonSet and a Kubernetes Object, recording that the Kubernetes Object has a DaemonSet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">has DaemonSet</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a DaemonSet and a Kubernetes Object, recording that the Kubernetes Object has a DaemonSet.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/has_Deployment -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/has_Deployment">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Deployment_of"/>
+        <rdfs:comment xml:lang="en">Relation between a Deployment and a Kubernetes Object, recording that the Kubernetes Object has a Deployment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">has Deployment</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Deployment and a Kubernetes Object, recording that the Kubernetes Object has a Deployment.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/has_Job -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/has_Job">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Job_of"/>
+        <rdfs:comment xml:lang="en">Relation between a Deployment and a Kubernetes Object, recording that a Kubernetes Object has a Job.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">has Job</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Job and a Kubernetes Object, recording that a Kubernetes Object has a Job.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/has_Kubernetes_Master -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/has_Kubernetes_Master">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Kubernetes_Master_of"/>
+        <rdfs:comment xml:lang="en">Relation between a Kubernetes Node and a Kubernetes Master, recording that the Kubernetes Node has Kubernetes Master.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">has Kubernetes Master</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Kubernetes Node and a Kubernetes Master, recording that the Kubernetes Node has Kubernetes Master.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/has_Kubernetes_Worker -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/has_Kubernetes_Worker">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Kubernetes_Worker_of"/>
+        <rdfs:comment xml:lang="en">Relation between a Kubernetes Node and a Kubernetes Worker, recording that the Kubernetes Node has a Kubernetes Worker.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">has Kubernetes Worker</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Kubernetes Node and a Kubernetes Worker, recording that the Kubernetes Node has a Kubernetes Worker.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/has_Namespace -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/has_Namespace">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Namespace_of"/>
+        <rdfs:comment xml:lang="en">Relation between a Namespace and a Kubernetes Object, recording that the  Kubernetes Object has a Namespace.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">has Namespace</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Namespace and a Kubernetes Object, recording that the  Kubernetes Object has a Namespace.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/has_Pod -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/has_Pod">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Pod_of"/>
+        <rdfs:comment xml:lang="en">Relation between a Pod and a Kubernetes Object, recording that the  Kubernetes Object has a Pod.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">has Pod</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Pod and a Kubernetes Object, recording that the  Kubernetes Object has a Pod.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/has_Pod_Phase -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/has_Pod_Phase">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Pod_Phase_of"/>
+        <rdfs:comment xml:lang="en">Relation between a Pod and a Pod Phase, recording that a Pod has a Pod Phase.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">has Pod Phase</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Pod and a Pod Phase, recording that a Pod has a Pod Phase.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/has_ReplicaSet -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/has_ReplicaSet">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_ReplicaSet_of"/>
+        <rdfs:comment xml:lang="en">Relation between a ReplicaSet and a Kubernetes Object, recording that the  Kubernetes Object has a ReplicaSet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">has ReplicaSet</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a ReplicaSet and a Kubernetes Object, recording that the  Kubernetes Object has a ReplicaSet.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/has_Service -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/has_Service">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Service_of"/>
+        <rdfs:comment xml:lang="en">Relation between a Service and a Kubernetes Object, recording that Kubernetes Object has a Service.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">has Service</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Service and a Kubernetes Object, recording that Kubernetes Object has a Service.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/has_StatefulSet -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/has_StatefulSet">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_StatefulSet_of"/>
+        <rdfs:comment xml:lang="en">Relation between a StatefulSet and a Kubernetes Object, recording that a Kubernetes Object has a StatefulSet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">has StatefulSet</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a StatefulSet and a Kubernetes Object, recording that a Kubernetes Object has a StatefulSet.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/has_Volume -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/has_Volume">
+        <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Volume_of"/>
+        <rdfs:comment xml:lang="en">Relation between a Volume and a Kubernetes Object, recording that a Kubernetes Object has a Volume.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">has Volume</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Volume and a Kubernetes Object, recording that a Kubernetes Object has a Volume.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/is_Container_Phase_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/is_Container_Phase_of">
+        <rdfs:comment xml:lang="en">Relation between a Container Phase and a Container, recording that the Container Phase is attached to a container.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">is Container Phase of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Container Phase and a Container, recording that the Container Phase is attached to a container.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/is_Container_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/is_Container_of">
+        <rdfs:comment xml:lang="en">Relation between a Pod and a Container, recording that the Container attached to a Pod.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">is Container of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Pod and a Container, recording that the Container attached to a Pod.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/is_DaemonSet_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/is_DaemonSet_of">
+        <rdfs:comment xml:lang="en">Relation between a DaemonSet and a Kubernetes Object, recording that the  DaemonSet is a Kubernetes Object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">is DaemonSet of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a DaemonSet and a Kubernetes Object, recording that the  DaemonSet is a Kubernetes Object.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/is_Deployment_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/is_Deployment_of">
+        <rdfs:comment xml:lang="en">Relation between a Deployment and a Kubernetes Object, recording that the  Deployment is a Kubernetes Object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">is Deployment of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Deployment and a Kubernetes Object, recording that the  Deployment is a Kubernetes Object.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/is_Job_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/is_Job_of">
+        <rdfs:comment xml:lang="en">Relation between a Job and a Kubernetes Object, recording that a Job is an Kubernetes Object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">is Job of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Job and a Kubernetes Object, recording that a Job is an Kubernetes Object.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/is_Kubernetes_Master_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/is_Kubernetes_Master_of">
+        <rdfs:comment xml:lang="en">Relation between a Kubernetes Node and a Kubernetes Master, recording that a Kubernetes Master is one of Kubernetes Nodes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">is Kubernetes Master of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Kubernetes Node and a Kubernetes Master, recording that a Kubernetes Master is one of Kubernetes Nodes.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/is_Kubernetes_Worker_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/is_Kubernetes_Worker_of">
+        <rdfs:comment xml:lang="en">Relation between a Kubernetes Node and a Kubernetes Worker, Kubernetes Worker is a Kubernetes Node.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">is Kubernetes Worker of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Kubernetes Node and a Kubernetes Worker, Kubernetes Worker is a Kubernetes Node.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/is_Namespace_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/is_Namespace_of">
+        <rdfs:comment xml:lang="en">Relation between a Namespace and a Kubernetes Object, recording that the  Namespace is a Kubernetes Object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">is Namespace of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Namespace and a Kubernetes Object, recording that the  Namespace is a Kubernetes Object.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/is_Pod_Phase_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/is_Pod_Phase_of">
+        <rdfs:comment xml:lang="en">Relation between a Pod and a Pod Phase, recording that a Pod Phase is attached to a Pod.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">is Pod Phase of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Pod and a Pod Phase, recording that a Pod Phase is attached to a Pod.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/is_Pod_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/is_Pod_of">
+        <rdfs:comment xml:lang="en">Relation between a Pod and a Kubernetes Object, recording that a Pod is a Kubernetes Object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">is Pod of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Pod and a Kubernetes Object, recording that a Pod is a Kubernetes Object.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/is_ReplicaSet_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/is_ReplicaSet_of">
+        <rdfs:comment xml:lang="en">Relation between a ReplicaSet and a Kubernetes Object, recording that the   ReplicaSet is a Kubernetes Object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">is ReplicaSet of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a ReplicaSet and a Kubernetes Object, recording that the   ReplicaSet is a Kubernetes Object.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/is_Service_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/is_Service_of">
+        <rdfs:comment xml:lang="en">Relation between a Service and a Kubernetes Object, recording that a Service is a Kubernetes Object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">is Service of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Service and a Kubernetes Object, recording that a Service is a Kubernetes Object.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/is_StatefulSet_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/is_StatefulSet_of">
+        <rdfs:comment xml:lang="en">Relation between a StatefulSet and a Kubernetes Object, recording that a StatefulSet is a Kubernetes Object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">is StatefulSet of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a StatefulSet and a Kubernetes Object, recording that a StatefulSet is a Kubernetes Object.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/is_Volume_of -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/kubernetes/is_Volume_of">
+        <rdfs:comment xml:lang="en">Relation between a Volume and a Kubernetes Object, recording that a Volume is a Kubernetes Object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">is Volume of</rdfs:label>
+        <skos:definition xml:lang="en">Relation between a Volume and a Kubernetes Object, recording that a Volume is a Kubernetes Object.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/CP_Created -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Created">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Container_Phase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/CP_Deleted -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Deleted">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Container_Phase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/CP_Paused -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Paused">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Container_Phase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/CP_Running -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Running">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Container_Phase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/CP_Stopped -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Stopped">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Container_Phase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/CP_Unknown -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Unknown">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Container_Phase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/Container -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/Container">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Pod"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Container_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Pod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/has_Container_Phase"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Container_Phase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Kubernetes schedules Pods, that have one or more containers inside it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">Container</rdfs:label>
+        <skos:definition xml:lang="en">A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/Container_Phase -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/Container_Phase">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Container"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Created"/>
+                    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Deleted"/>
+                    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Paused"/>
+                    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Running"/>
+                    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Stopped"/>
+                    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Unknown"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Container_Phase_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Container"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Docker container has it&apos;s own lifecycle, we call it Container phases.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">Container Phase</rdfs:label>
+        <skos:definition xml:lang="en">Docker container has it&apos;s own lifecycle, we call it Container phases.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/DaemonSet -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/DaemonSet">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_DaemonSet_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A DaemonSet ensures that all (or some) Nodes run a copy of a Pod.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">DaemonSet</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/</rdfs:seeAlso>
+        <skos:definition xml:lang="en">A DaemonSet ensures that all (or some) Nodes run a copy of a Pod.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/Deployment -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/Deployment">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Deployment_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Deployment provides declarative updates for Pods and ReplicaSets.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">Deployment</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://kubernetes.io/docs/concepts/workloads/controllers/deployment/</rdfs:seeAlso>
+        <skos:definition xml:lang="en">A Deployment provides declarative updates for Pods and ReplicaSets.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/Job -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/Job">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Job_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Job creates one or more Pods and ensures that a specified number of them successfully terminate.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">Job</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/</rdfs:seeAlso>
+        <skos:definition xml:lang="en">A Job creates one or more Pods and ensures that a specified number of them successfully terminate.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Master -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Master">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Kubernetes_Master_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The Kubernetes Master is a collection of three processes that run on a single node in your cluster, which is designated as the master node.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Kubernetes master is responsible for maintaining the desired state for your cluster.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Those processes are: kube-apiserver, kube-controller-manager and kube-scheduler.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">Kubernetes Master</rdfs:label>
+        <skos:definition xml:lang="en">The Kubernetes Master is a collection of three processes that run on a single node in your cluster, which is designated as the master node.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/has_Kubernetes_Master"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Master"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/has_Kubernetes_Master"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Worker"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The nodes in a cluster are the machines (VMs, physical servers, etc) that run your applications and cloud workflows.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">Kubernetes Node</rdfs:label>
+        <skos:definition xml:lang="en">The nodes in a cluster are the machines (VMs, physical servers, etc) that run your applications and cloud workflows.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/has_DaemonSet"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/DaemonSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/has_Deployment"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Deployment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/has_Job"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Job"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/has_Namespace"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Namespace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/has_Pod"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Pod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/has_ReplicaSet"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/ReplicaSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/has_Service"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Service"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/has_StatefulSet"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/StatefulSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/has_Volume"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Volume"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Kubernetes objects are persistent entities in the Kubernetes system. Kubernetes uses these entities to represent the state of your cluster.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">Kubernetes Object</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/#kubernetes-objects"/>
+        <skos:definition xml:lang="en">Kubernetes objects are persistent entities in the Kubernetes system. Kubernetes uses these entities to represent the state of your cluster.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Worker -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Worker">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Kubernetes_Worker_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Each node contains the services necessary to run pods and is managed by the master component.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Kubernetes Worker hosts Kubernetes Objects and runs workload.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">Kubernetes Worker</rdfs:label>
+        <skos:definition xml:lang="en">The Kubernetes Worker hosts Kubernetes Objects and runs workload.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/Namespace -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/Namespace">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Namespace_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Kubernetes supports multiple virtual clusters backed by the same physical cluster. These virtual clusters are called namespaces.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">Namespace</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Kubernetes supports multiple virtual clusters backed by the same physical cluster. These virtual clusters are called namespaces.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/PP_Failed -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/PP_Failed">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Pod_Phase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/PP_Pending -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/PP_Pending">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Pod_Phase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/PP_Running -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/PP_Running">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Pod_Phase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/PP_Succeeded -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/PP_Succeeded">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Pod_Phase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/PP_Unknown -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/PP_Unknown">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Pod_Phase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/Pod -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/Pod">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/has_Container"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Container"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Pod_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/has_Pod_Phase"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Pod_Phase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Pod is the basic execution unit of a Kubernetes application–the smallest and simplest unit in the Kubernetes object model that you create or deploy. A Pod represents processes running on your Cluster.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">Pod</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/</rdfs:seeAlso>
+        <skos:definition xml:lang="en">A Pod is the basic execution unit of a Kubernetes application–the smallest and simplest unit in the Kubernetes object model that you create or deploy. A Pod represents processes running on your Cluster.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/Pod_Phase -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/Pod_Phase">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Pod"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/PP_Failed"/>
+                    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/PP_Pending"/>
+                    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/PP_Running"/>
+                    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/PP_Succeeded"/>
+                    <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/PP_Unknown"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Pod_Phase_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Pod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The phase of a Pod is a simple, high-level summary of where the Pod is in its lifecycle.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">Pod Phase</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-phase</rdfs:seeAlso>
+        <skos:definition xml:lang="en">The phase of a Pod is a simple, high-level summary of where the Pod is in its lifecycle.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/ReplicaSet -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/ReplicaSet">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_ReplicaSet_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A ReplicaSet’s purpose is to maintain a stable set of replica Pods running at any given time.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">ReplicaSet</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/</rdfs:seeAlso>
+        <skos:definition xml:lang="en">A ReplicaSet’s purpose is to maintain a stable set of replica Pods running at any given time.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/Service -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/Service">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Service_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An abstract way to expose an application running on a set of Pods as a network service.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://kubernetes.io/docs/concepts/services-networking/service/</rdfs:seeAlso>
+        <skos:definition xml:lang="en">An abstract way to expose an application running on a set of Pods as a network service.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/StatefulSet -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/StatefulSet">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_StatefulSet_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">StatefulSet is the workload API object used to manage stateful applications.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">StatefulSet</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/</rdfs:seeAlso>
+        <skos:definition xml:lang="en">StatefulSet is the workload API object used to manage stateful applications.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/Volume -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/kubernetes/Volume">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/kubernetes/is_Volume_of"/>
+                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A volume is just a directory, possibly with some data in it, which is accessible to the Containers in a Pod.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://inf.mit.bme.hu/research/kubernetes/"/>
+        <rdfs:label xml:lang="en">Volume</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://kubernetes.io/docs/concepts/storage/volumes/</rdfs:seeAlso>
+        <skos:definition xml:lang="en">A volume is just a directory, possibly with some data in it, which is accessible to the Containers in a Pod.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocommons/voaf#Vocabulary -->
+
+    <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/kubernetes/ -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/kubernetes/">
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Created"/>
+            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Deleted"/>
+            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Paused"/>
+            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Running"/>
+            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Stopped"/>
+            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/CP_Unknown"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/PP_Failed"/>
+            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/PP_Pending"/>
+            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/PP_Running"/>
+            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/PP_Succeeded"/>
+            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/PP_Unknown"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

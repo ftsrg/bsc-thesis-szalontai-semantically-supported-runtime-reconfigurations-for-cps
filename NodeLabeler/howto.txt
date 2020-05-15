@@ -1,0 +1,2 @@
+docker run -it -v /d/Dokumentumok/szakdoga/kubernetes_config:/root/.kube/config --network=host localhost:5001/kubelabel
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.w3.org/ns/ssn/" uri="ssn_off.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://inf.mit.bme.hu/research/dds/" uri="dds_full.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1585839541485" name="duplicate:http://inf.mit.bme.hu/research/cpsdatastream/" uri="full.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1585839541485" name="duplicate:http://inf.mit.bme.hu/research/cpsdatastream/" uri="sensors_full.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1585839541485" name="http://inf.mit.bme.hu/research/dds/" uri="dds_full.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1585839541485" name="http://inf.mit.bme.hu/research/kubernetes/" uri="kubernetes_full.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1585839541485" name="https://www.geonames.org/ontology" uri="geonames.rdf"/>
+    </group>
+</catalog>

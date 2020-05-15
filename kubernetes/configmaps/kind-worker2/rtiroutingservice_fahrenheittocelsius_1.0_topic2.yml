@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rtiroutingservice-fahrenheittocelsius.1.0-topic2
+  namespace: default
+data:
+  NDDS_DISCOVERY_PEERS: rtps@rti-cloud-discovery.default:7400
+  TOPIC_OUTPUT: topic2
+  TOPIC_INPUT: topic2_raw

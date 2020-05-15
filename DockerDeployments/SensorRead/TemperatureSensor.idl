@@ -1,0 +1,7 @@
+struct TemperatureSensor{
+    string sensorID;
+	string location;
+	string unit;
+	double value;
+	string readtime;
+};

@@ -1,1 +1,6 @@
-# init
+# szakdoga
+
+## Using fcaR
+
+install Rstudio, R
+

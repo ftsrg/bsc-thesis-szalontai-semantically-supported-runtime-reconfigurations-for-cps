@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stardog-studio-deployment
+  labels:
+    app: stardog-studio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stardog-studio
+  template:
+    metadata:
+      labels:
+        app: stardog-studio
+    spec:
+      containers:
+      - name: stardog-studio
+        image: stardog/stardog-studio:current
+        ports:
+        - containerPort: 80
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - kind-control-plane
+      tolerations:
+      - key: "node-role.kubernetes.io/master"
+        operator: "Exists"
+        effect: "NoSchedule"

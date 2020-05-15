@@ -1,0 +1,35 @@
+######################################################################
+# makefile_router_transf
+#
+# (c) Copyright, Real-Time Innovations, 2007.  All rights reserved.
+# No duplications, whole or partial, manual or electronic, may be made
+# without express written permission.  Any such copies, or
+# revisions thereof, must display this notice unaltered.
+# This code contains trade secrets of Real-Time Innovations, Inc.
+#
+#
+# To compile, type:
+# 	gmake -f <makefile_file_name>
+#
+# Note: This makefile is only meant to build our example applications and
+#       may require alterations to build on your system.
+#
+# This makefile assumes that your build environment is already correctly
+# configured. (For example, the correct version of your compiler and
+# linker should be on your PATH.)
+######################################################################
+
+DEFINES_ARCH_SPECIFIC = -DRTI_UNIX -DRTI_LINUX
+
+ARCH = ppce6500Linuxgcc5.2.0
+
+CCPATH = /opt/toolchains/ppce6500Linuxgcc5.2.0/WRLinux8/toolchain/sysroots/x86_64-wrlinuxsdk-linux/usr/bin/powerpc-wrsmllib32-linux
+SYSROOT = /opt/toolchains/ppce6500Linuxgcc5.2.0/WRLinux8/toolchain/sysroots/ppc64e6500-wrs-linux
+c_cc = ${CCPATH}/powerpc-wrsmllib32-linux-gcc
+c_cc_flags = --sysroot=$(SYSROOT) -fpic
+c_ld = ${CCPATH}/powerpc-wrsmllib32-linux-gcc
+c_ld_flags = --sysroot=$(SYSROOT)
+syslibs = -lm -lpthread -lrt -ldl
+
+
+include Makefile.Common

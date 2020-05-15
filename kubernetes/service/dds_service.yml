@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ddsservice
+spec:
+  ports:
+  - port: 7400
+    protocol: TCP
+    targetPort: rtpsdiscovery
+    name: rtpsdiscovery
+  - port: 7410
+    protocol: TCP
+    targetPort: rtps1
+    name: rtps1
+  - port: 7411
+    protocol: TCP
+    targetPort: rtps2
+    name: rtps2
+  selector:
+    app: dds_app
+

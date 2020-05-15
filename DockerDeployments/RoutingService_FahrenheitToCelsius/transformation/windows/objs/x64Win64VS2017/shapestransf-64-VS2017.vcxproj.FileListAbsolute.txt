@@ -1,0 +1,3 @@
+C:\Users\jeno96\Documents\rti_workspace\6.0.1\examples\routing_service\shapes\transformation\windows\objs\x64Win64VS2017\shapestransf.dll
+D:\Dokumentumok\szakdoga\DockerDeployments\RoutingService\transformation\windows\objs\x64Win64VS2017\VirtualSensors.dll
+D:\Dokumentumok\szakdoga\DockerDeployments\RoutingService_FahrenheitToCelsius\transformation\windows\objs\x64Win64VS2017\VirtualSensors.dll

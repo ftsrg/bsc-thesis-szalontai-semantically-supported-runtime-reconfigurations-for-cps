@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpsds.topic3
+  labels:
+    app: dds_app
+spec:
+  containers:
+  - name: topic3
+    image: dds_sensor:1.0
+    args: 
+    - TemperatureSensorSubscriber
+    envFrom:
+    - configMapRef:
+        name: cpsds.topic3
+    ports:
+      - containerPort: 7400
+      - containerPort: 7410
+      - containerPort: 7411
+      - containerPort: 7412
+      - containerPort: 7413

@@ -1,0 +1,34 @@
+######################################################################
+# makefile_router_transf
+#
+# (c) Copyright, Real-Time Innovations, 2019.  All rights reserved.
+# No duplications, whole or partial, manual or electronic, may be made
+# without express written permission.  Any such copies, or
+# revisions thereof, must display this notice unaltered.
+# This code contains trade secrets of Real-Time Innovations, Inc.
+#
+#
+# To compile, type:
+#   #Define SYSROOT with the location of the Yocto toolchain sysroot
+# 	gmake -f <makefile_file_name>
+#
+# Note: This makefile is only meant to build our example applications and
+#       may require alterations to build on your system.
+#
+# This makefile assumes that your build environment is already correctly
+# configured. (For example, the correct version of your compiler and
+# linker should be on your PATH.)
+######################################################################
+
+DEFINES_ARCH_SPECIFIC = -DRTI_UNIX -DRTI_LINUX
+
+ARCH = armv7Linuxgcc7.3.0
+
+c_cc = arm-poky-linux-gcc
+c_cc_flags = --sysroot=$(SYSROOT) -march=armv7 -mthumb -mfloat-abi=hard -mabi=aapcs-linux -fPIC
+c_ld = arm-poky-linux-gcc
+c_ld_flags = --sysroot=$(SYSROOT)
+syslibs = -ldl -lnsl -lm -lpthread
+
+
+include Makefile.Common
