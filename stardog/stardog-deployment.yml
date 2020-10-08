@@ -14,6 +14,13 @@ spec:
       labels:
         app: stardog
     spec:
+      initContainers:
+      - name: example-c
+        image: busybox:latest
+        command: ["sh","-c","mkdir -p /var/opt/stardog && chown -R 1000:1000 /var/opt/stardog"]
+        volumeMounts:
+        - name: stardog-config-file
+          mountPath: /var/opt/stardog
       containers:
       - name: stardog
         image: stardog/stardog
